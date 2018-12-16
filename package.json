@@ -1,0 +1,22 @@
+{
+  "name": "dcvmu",
+  "version": "1.0.0",
+  "description": "upload vmu files from your dreamcast",
+  "main": "index.js",
+  "dependencies": {
+    "async": "^2.6.1",
+    "formidable": "^1.2.1",
+    "pad": "^2.2.1",
+    "php-pack": "^1.0.2-release"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vmu",
+    "dreamcast"
+  ],
+  "author": "Rowan Hamilton",
+  "license": "ISC"
+}
