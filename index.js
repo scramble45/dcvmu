@@ -28,6 +28,7 @@ var server = http.createServer(function (req, res) {
       }
 
       fileName = fileName[1]
+      var originalFileName = fileName
       fileName = fileName.substring(0, 8)
       while (fileName.length < 8) { fileName += "_" }
 
@@ -43,7 +44,7 @@ var server = http.createServer(function (req, res) {
           })
         },
         function (callback) {
-          getVMI(fileName, function (err, result) {
+          getVMI([fileName, originalFileName], function (err, result) {
             if (err) {
               callback(err)
             } else {
@@ -56,7 +57,7 @@ var server = http.createServer(function (req, res) {
           if (err) {
             console.error(err)
             res.writeHead(400, { 'Content-Type': 'text/html' })
-            res.write(`<div>An Error Occured</div>`)
+            res.write(`<div>An Error Occured.</div>`)
             res.end()
             return
           }
