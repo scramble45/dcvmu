@@ -8,7 +8,7 @@ const async = require('async')
 
 const port = 8080
 
-var server = http.createServer(function (req, res) {
+http.createServer(function (req, res) {
   if (req.url == '/upload') {
     var form = new formidable.IncomingForm();
     form.parse(req, function (err, fields, files) {
